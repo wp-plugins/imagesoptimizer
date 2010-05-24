@@ -1,0 +1,55 @@
+# RUSSIAN (RU) translation for WordPress.
+# Copyright (C) 2009 WordPress contributors.
+# This file is distributed under the same license as the WordPress package.
+# Serafim Panov <serafimpanov@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: imagesoptimizer\n"
+"Report-Msgid-Bugs-To: serafimpanov@gmail.com\n"
+"POT-Creation-Date: 2010-05-09 17:11-0600\n"
+"PO-Revision-Date: 2010-05-22 18:04+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: imagesoptimizer.php:77
+msgid "Add watermark"
+msgstr "Добавить водяной знак"
+
+#: imagesoptimizer.php:135
+msgid "to image"
+msgstr "К изображению"
+
+#: imagesoptimizer.php:135
+msgid "to image and thumbnail"
+msgstr "К изображению и миниатюре"
+
+#: imagesoptimizer.php:179
+#: imagesoptimizer.php:193
+msgid "Optimize"
+msgstr "Оптимизировать"
+
+#: optimize.php:45
+#: watermark.php:115
+msgid "Done"
+msgstr "Готово"
+
+#: imagesoptimizer.php:51
+msgid "Watermark text"
+msgstr "Текст водяного знака"
+
+#: imagesoptimizer.php:57
+msgid "Update Options"
+msgstr "Сохранить"
+
+#: imagesoptimizer.php:193
+msgid "size"
+msgstr "размер"
+
+#: imagesoptimizer.php:193
+msgid "better for"
+msgstr "лучше на"
+
