@@ -1,6 +1,6 @@
 === Easy Watermark and Images Optimize ===
 Contributors: spnova
-Donate link: http://www.zhenskayalogika.ru/files/donate.html
+Donate link: http://www.zhenskayalogika.ru/2009/11/13/plagin-posts-compare-%e2%80%93-na-strazhe-kontenta/
 Tags: watermark, optimize, images
 Requires at least: 1.0
 Tested up to: 2.9
