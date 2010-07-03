@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Easy Watermark and Images Optimize
-Plugin URI: http://www.zhenskayalogika.ru/2009/11/13/plagin-posts-compare-%e2%80%93-na-strazhe-kontenta/
+Plugin URI: http://downloads.wordpress.org/plugin/...
 Description: Simple way for adding Watermark to your images and image optimizer.
 Version: 1.0
 Author: Serafim Panov
@@ -14,6 +14,18 @@ function imagesoptimizer_get_options()
 
   if (!isset($imagesoptimizer_options['settings_watermark'])) 
     $imagesoptimizer_options['settings_watermark'] = str_replace("http://", "", get_bloginfo('url'));
+    
+  if (!isset($imagesoptimizer_options['settings_watermark_alpha'])) 
+    $imagesoptimizer_options['settings_watermark_alpha'] = 50;
+    
+  if (!isset($imagesoptimizer_options['settings_watermark_textcolor'])) 
+    $imagesoptimizer_options['settings_watermark_textcolor'] = "0,0,255";
+    
+  if (!isset($imagesoptimizer_options['settings_watermark_border1color'])) 
+    $imagesoptimizer_options['settings_watermark_border1color'] = "175,175,175";
+    
+  if (!isset($imagesoptimizer_options['settings_watermark_border2color'])) 
+    $imagesoptimizer_options['settings_watermark_border2color'] = "255,255,255";
     
   add_option('imagesoptimizer_options', $imagesoptimizer_options);
   return $imagesoptimizer_options;
@@ -39,7 +51,11 @@ function imagesoptimizer_configuration_page()
   $imagesoptimizer_options = imagesoptimizer_get_options();
   
   if (isset($_POST['submit'])) {
-    $imagesoptimizer_options['settings_watermark'] = $_POST['settings_watermark'];
+    $imagesoptimizer_options['settings_watermark']              = $_POST['settings_watermark'];
+    $imagesoptimizer_options['settings_watermark_alpha']        = $_POST['settings_watermark_alpha'];
+    $imagesoptimizer_options['settings_watermark_textcolor']    = $_POST['settings_watermark_textcolor'];
+    $imagesoptimizer_options['settings_watermark_border1color'] = $_POST['settings_watermark_border1color'];
+    $imagesoptimizer_options['settings_watermark_border2color'] = $_POST['settings_watermark_border2color'];
     update_option('imagesoptimizer_options', $imagesoptimizer_options);
   }
   ?>
@@ -53,6 +69,57 @@ function imagesoptimizer_configuration_page()
 <input type="text" name="settings_watermark" value="<?php if ($imagesoptimizer_options['settings_watermark']) print $imagesoptimizer_options['settings_watermark']; ?>" style="width:350px;" />
 </div>
 </div>
+
+<div style="clear: both;-moz-border-radius:6px 6px 6px 6px;background-color:#B5CDDF;list-style-type:none;padding:5px 5px 5px 10px;margin:5px;height:24px;">
+<div style="float:left;width:180px;padding-top:3px;"></div>
+<div style="float:left;width:170px;">
+</div>
+<div style="float:left;width:170px;padding-top:3px;"><b><?php _e('Transparency', 'imagesoptimizer'); ?></b></div>
+<div style="float:left;">
+<input type="text" name="settings_watermark_alpha" value="<?php if ($imagesoptimizer_options['settings_watermark_alpha']) print $imagesoptimizer_options['settings_watermark_alpha']; ?>" style="width:50px;" />
+</div>
+</div>
+
+<div style="clear: both;-moz-border-radius:6px 6px 6px 6px;background-color:#B5CDDF;list-style-type:none;padding:5px 5px 5px 10px;margin:5px;height:24px;">
+<div style="float:left;width:180px;padding-top:3px;"></div>
+<div style="float:left;width:170px;">
+</div>
+<div style="float:left;width:170px;padding-top:3px;"><b><?php _e('Text color', 'imagesoptimizer'); ?></b></div>
+<div style="float:left;">
+<input type="text" name="settings_watermark_textcolor" value="<?php if ($imagesoptimizer_options['settings_watermark_textcolor']) print $imagesoptimizer_options['settings_watermark_textcolor']; ?>" style="width:350px;" />
+</div>
+</div>
+
+<div style="clear: both;-moz-border-radius:6px 6px 6px 6px;background-color:#B5CDDF;list-style-type:none;padding:5px 5px 5px 10px;margin:5px;height:24px;">
+<div style="float:left;width:180px;padding-top:3px;"></div>
+<div style="float:left;width:170px;">
+</div>
+<div style="float:left;width:170px;padding-top:3px;"><b><?php _e('Border 1 color', 'imagesoptimizer'); ?></b></div>
+<div style="float:left;">
+<input type="text" name="settings_watermark_border1color" value="<?php if ($imagesoptimizer_options['settings_watermark_border1color']) print $imagesoptimizer_options['settings_watermark_border1color']; ?>" style="width:350px;" />
+</div>
+</div>
+
+<div style="clear: both;-moz-border-radius:6px 6px 6px 6px;background-color:#B5CDDF;list-style-type:none;padding:5px 5px 5px 10px;margin:5px;height:24px;">
+<div style="float:left;width:180px;padding-top:3px;"></div>
+<div style="float:left;width:170px;">
+</div>
+<div style="float:left;width:170px;padding-top:3px;"><b><?php _e('Border 2 color', 'imagesoptimizer'); ?></b></div>
+<div style="float:left;">
+<input type="text" name="settings_watermark_border2color" value="<?php if ($imagesoptimizer_options['settings_watermark_border2color']) print $imagesoptimizer_options['settings_watermark_border2color']; ?>" style="width:350px;" />
+</div>
+</div>
+
+
+<div style="clear: both;-moz-border-radius:6px 6px 6px 6px;background-color:#B5CDDF;list-style-type:none;padding:5px 5px 5px 10px;margin:5px;height:24px;">
+<div style="float:left;width:180px;padding-top:3px;"></div>
+<div style="float:left;width:170px;">
+</div>
+<div style="float:left;width:170px;padding-top:3px;"><b><?php _e('Preview'); ?></b></div>
+<div style="float:left;"><a href="../wp-content/plugins/imagesoptimizer/watermark.php?preview=2&t<?php echo time() ?>" target="_blank"><?php _e('Preview'); ?></a>
+</div>
+</div>
+
 <div style="clear: both;padding-top:10px;text-align:center;">
 <p class="submit"><input type="submit" name="submit" value="<?php _e('Update Options', 'imagesoptimizer'); ?>" /></p>
 </div>

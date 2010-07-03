@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: imagesoptimizer\n"
 "Report-Msgid-Bugs-To: serafimpanov@gmail.com\n"
 "POT-Creation-Date: 2010-05-09 17:11-0600\n"
-"PO-Revision-Date: 2010-05-22 18:04+0700\n"
+"PO-Revision-Date: 2010-07-03 13:01+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,15 +33,31 @@ msgid "Optimize"
 msgstr "Оптимизировать"
 
 #: optimize.php:45
-#: watermark.php:115
+#: watermark.php:185
 msgid "Done"
 msgstr "Готово"
 
-#: imagesoptimizer.php:51
+#: imagesoptimizer.php:67
 msgid "Watermark text"
 msgstr "Текст водяного знака"
 
-#: imagesoptimizer.php:57
+#: imagesoptimizer.php:77
+msgid "Transparency"
+msgstr "Прозрачность"
+
+#: imagesoptimizer.php:87
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: imagesoptimizer.php:97
+msgid "Border 1 color"
+msgstr "1я обводка"
+
+#: imagesoptimizer.php:107
+msgid "Border 2 color"
+msgstr "2я обводка"
+
+#: imagesoptimizer.php:124
 msgid "Update Options"
 msgstr "Сохранить"
 
