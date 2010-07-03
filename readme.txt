@@ -4,7 +4,7 @@ Donate link: http://www.zhenskayalogika.ru/files/donate.html
 Tags: watermark, optimize, images
 Requires at least: 1.0
 Tested up to: 2.9
-Stable tag: 1.0
+Stable tag: 2.0.1.3
 Version: 1.4
 
 == Description ==
