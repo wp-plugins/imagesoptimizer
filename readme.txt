@@ -1,10 +1,10 @@
 === Easy Watermark and Images Optimize ===
 Contributors: spnova
-Donate link: http://www.zhenskayalogika.ru/files/donate.html
+Donate link: http://www.ehalimedvedi.ru/2010/05/tailand-otzyvy-i-mify/
 Tags: watermark, optimize, images
 Requires at least: 1.0
 Tested up to: 2.9
-Stable tag: 1.0
+Stable tag: 1.4
 Version: 1.4
 
 == Description ==

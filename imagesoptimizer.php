@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Easy Watermark and Images Optimize
-Plugin URI: http://downloads.wordpress.org/plugin/...
+Plugin URI: http://www.zhenskayalogika.ru/
 Description: Simple way for adding Watermark to your images and image optimizer.
 Version: 1.0
 Author: Serafim Panov
